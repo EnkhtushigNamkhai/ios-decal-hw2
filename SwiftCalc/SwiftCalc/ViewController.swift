@@ -166,6 +166,14 @@ class ViewController: UIViewController {
             value = 0 - value!
             user_num = String(value!)
             updateResultLabel(user_num)
+        } else if (sender.content == "%") {
+            print("goes in here right")
+            let value  = Double(user_num)
+            let new_val = (value!)/100
+            user_num = String(new_val)
+            updateResultLabel(user_num)
+
+            
         } else if number_pressed {
             number_pressed = false
             DataStructure[counter] = user_num
